@@ -16,7 +16,7 @@ class Main {
     // end of data input
 
     // loads team file
-    File fileTeams = new File("../data/MTeams.csv");
+    File fileTeams = new File("./data/MTeams.csv");
     
     // Scanner to scan the file
     String lineValue = "";
@@ -34,8 +34,7 @@ class Main {
       }
       
     }
-   
-   for(int j = teamName.length; j > -1; --j){
+   for(int j = teamName.length - 1; j > -1; j--){
      Teams team = new Teams(teamName[j], teamID[j], j);
       teamList.add(team);
    }
