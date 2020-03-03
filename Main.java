@@ -16,7 +16,7 @@ class Main {
     // end of data input
 
     // loads team file
-    File fileTeams = new File("./data/MTeams.csv");
+    File fileTeams = new File("../data/MTeams.csv");
     
     // Scanner to scan the file
     String lineValue = "";
@@ -34,23 +34,28 @@ class Main {
       }
       
     }
-   for(int j = teamName.length - 1; j > -1; j--){
-     Teams team = new Teams(teamName[j], teamID[j], j);
+   
+   for(int j = teamName.length; j > -1; --j){
+     Teams team = new Teams(teamName[j], teamID[j], j, 1,1,1);
       teamList.add(team);
    }
    //difference between seeds
    //PPG - PAPG q1
    //win%
    //previous placement
-  //while(teamList.size()!= 1){
-  //for(int k = 0; k < teamList.size()/2; k++){
-   //match(teamList.get(k), teamList.get(k+1));
-    
-  //}
-  //}
-
-
-  //compare
+  /*while(teamList.size()!= 1){
+  for(int k = 0; k < teamList.size()/2; k++){
+    Teams one = (Teams)teamList.get(k);
+    Teams two = (Teams)teamList.get(k+1);
+    String winner = match(one,two);
+    if(winner.equals(one.teamName) {
+      teamList.remove(two);
+    }
+    else {
+      teamList.remove(one);
+    }
+  }
+  }//compare*/
  
   
 
